@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-int main(void) {
+int calcFloat(void) {
 
     __int32_t first_N1 = 12, first_N2 = 21;
     int str_len = 6;
