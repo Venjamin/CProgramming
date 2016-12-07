@@ -10,7 +10,10 @@
 int sort(void) {
     int arr[] = {0, 32, 53, 71, 24, 61, 75, 61, 99 };
     int len_arr2 = 100;
-    int arr2[100] = {0};
+    int arr2[len_arr2];
+    for (int j = 0; j < len_arr2; ++j) {
+        arr2[j] = 0;
+    }
 
     for (int var = 0; var < sizeof(arr)/ sizeof(int); ++var) {
         arr2[arr[var]]++;

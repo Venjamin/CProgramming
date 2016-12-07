@@ -1,13 +1,16 @@
 
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 int calcFloat(void) {
 
-    __int32_t first_N1 = 12, first_N2 = 21;
+    int first_N2, first_N1, temp1, temp2, second_result, firstResult;
     int str_len = 6;
-    char second_N2[6] = {"923545"};
-    char second_N1[6] = {"239"};
-
+    char second_N2[str_len];
+    char second_N1[str_len];
+    char secondCharResult[6] = {0};
+//    sscanf();
     printf("Enter first part of N1:\n");
     scanf("%d", &first_N1);
     printf( "Enter second part of N1:\n");
@@ -16,15 +19,16 @@ int calcFloat(void) {
     scanf("%d", &first_N2);
     printf( "Enter second part of N2:\n");
     scanf("%s", second_N2);
-
+//    strlen(second_N2);
+//    atoi(second_N2);
     printf( "\nYou entered first part N1: %d\n", first_N1);
     printf( "\nYou entered second part N1: %s\n", second_N1);
     printf( "\nYou entered first part N2: %d\n", first_N2);
     printf( "\nYou entered second part N2: %s\n", second_N2);
-    int second_result;
-    int firstResult = first_N1 + first_N2;
-    char secondCharResult[6] = {"000000"};
-    int temp1, temp2;
+
+    firstResult = first_N1 + first_N2;
+
+
     for (int i = str_len-1; i >= 0; --i) {
         if (second_N1[i] != 0 && second_N2[i] != 0) {
             temp1 = second_N1[i] - 48;
